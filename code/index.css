@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;   
+    font-family: 'Montserrat', sans-serif;
+font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Red Hat Display', sans-serif;
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100vw;
+    background-color: #6BAFD2;
+    position: relative;
+    background: url(/images/gradient_color_blue_155118_1280x720.jpg);
+}
+
+#main-content {
+    display: flex;
+}
+.container {
+    width: 93%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+header h5 {
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+.right {
+    display: flex;
+    align-items: center;
+}
+
+.right i {
+    font-size: 40px;
+    margin-right: 14px;
+}
+
+.right-2 h5 {
+    margin-left: 35px;
+}
+
+.left i {
+    font-size: 26px;
+    margin-right: 30px;
+}
+
+.lefty {
+    height: 100%;
+    width: 50%;
+    padding-top: 85px;
+}
+
+.text>h2 {
+    font-size: 5rem;
+    line-height: 3.9rem;
+}
+ 
+.text>p {
+        padding-top: 2rem;
+        word-spacing: 2px;
+    }
+
+
+.end-1 {
+    height: 60px;
+    width:190px;
+    background-color: white;
+    border-radius:33px;
+    display: flex;
+    align-items: center;
+    margin-top: 8rem;
+}
+
+.text-2 h5 {
+    color: black;
+    font-size: 9.5px;
+    font-weight: 100;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.circle {
+    background-color: pink;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 0 12px 0 6px;
+    padding: 10px 10px;
+    transition: all 0.3s;
+}
+
+.circle:hover {
+    background-color: rgb(230, 50, 80);
+}
+
+.text-2 h5:hover {
+    font-weight: 900;
+}
+
+.circle i {
+    font-size: 30px;
+}
+
+.end-text {
+    color: black;
+    font-size: 14px;
+}
+
+.righty {
+    height: 100%;
+    width: 50%;
+    padding: 3rem 0 0 23rem ;
+}
+
+.text-3 h1 {
+    font-size: 8rem;
+}
+
+.text-3 h4 {
+    word-spacing: 2px;
+    font-weight: 200;
+}
+
+/* -------------------------------- */
+
+.data-1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.data-1-1 {
+    display: flex;
+    align-items: center;    
+}
+
+.data-1-1 h5 {
+    margin-right: 37px;
+}
+
+.data-1 h5 {
+    margin-right: 30px;
+}
+
+.center {
+    position: absolute;
+    left: 30%;
+    top: 8%;
+}
+
+.weth-icons {
+    margin-top: 2rem;
+}
+
+.weth-icons i {
+    font-size: 1.5rem;
+}
+
+
+
+/* ------------------ */
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:200');
+
+:root {
+  --shadow: #fd6f21;
+  --ring: currentColor;
+  --blend1: #fc5830;
+  --blend2: #f98c24;
+  --blend-from: 0%;
+  --blend-to: 100%;
+  --blend-dir: top right;
+}
+
+[icon] {
+  flex: none;
+  display: none;
+  position: relative;
+  font-size: calc(10em + 1vmin);
+  width: 3em;
+  height: 3em;
+  margin: .3em;
+  border-radius: 100%;
+  box-shadow: 0 0 0 .05em var(--ring) inset, 0 0 .3em -.03em var(--shadow);
+  background: linear-gradient( to var(--blend-dir), var(--blend1) var(--blend-from), var(--blend2) var(--blend-to));
+/*   filter: saturate(0); */
+}
+/* [icon]:hover {
+  filter: saturate(1);
+} */
+[icon]::after {
+  content: attr(data-label);
+  position: absolute;
+  top: calc(100% + 1vmin);
+  left: 50%;
+  transform: translateX(-50%);
+  font: inherit;
+  font-size: .15em;
+}
+
+[icon='cloudy'] {
+  --shadow: yellow;
+  --blend1: #f98c24;
+  --blend2: #f98c24;
+  --shadow: #c9e8de;
+  --blend2: #e0e2e5;
+  --blend1: #f98c24;
+  --blend-to: 65%;
+  --blend-to: 90%;
+}
+
+/* CLOUDY */
+/* --------------------- */
+.cloud { 
+  position: absolute;
+  top: .1em;
+  left: 65%;
+  width: .37em;
+  height: .13em;
+  border-radius: .1em;
+  background-color:whitesmoke;
+  box-shadow: 0 0 .1em .02em var(--ring) inset, 0 0 .3em -.03em var(--shadow);
+  animation: move 3000ms infinite ease-in-out;
+}
+.cloud + .cloud {
+  top: 25%;
+  left: 40%;
+  animation: move 3000ms infinite linear;
+}
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: inherit;
+  border-radius: inherit;
+  background-color: inherit;
+  box-shadow: inherit;
+  bottom: 30%;
+}
+.cloud::before {
+  left: .05em;
+  width: .2em;
+  height: .2em;
+}
+.cloud::after {
+  left: .15em;
+  width: .15em;
+  height: .15em;
+}
+
+
+body {
+  min-height: 100vh;
+  font-size: calc(.5em + 1vmin);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  font-family: 'Work Sans', sans-serif;
+  background: #212125;
+  color: #e6e8db;
+}
+
+
+
+
+[icon="cloudy"] {
+  display: block;
+}
+
+@keyframes flare {
+  to {transform: translate(-.3em, .3em); opacity: .4; font-size: .2em;}
+}
+@keyframes move {
+  50% {transform: translateX(-.05em);}
+}
+@keyframes snow {
+  50% {opacity: 1;}
+  100% {transform: translate(-.1em, 15vmin);}
+}
+@keyframes snowman {
+  50% {border-radius: 60% 60% 30% 50%;}
+}
+@keyframes flash {
+	49% {background-color: var(--shadow);}
+	51% {background-color: var(--ring);}
+	53% {background-color: var(--shadow);}
+	57% {background-color: var(--ring);}
+	85% {background-color: var(--shadow);}
+
+}
+@keyframes revolve {
+  to {transform: rotate(360deg);}
+}
+@keyframes meteor {
+  5% {opacity: 1;}
+  8% {transform: translate(-.6em, .6em) rotate(45deg); opacity: 0;}
+}
