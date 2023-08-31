@@ -19,7 +19,12 @@ html,body {
     width: 100vw;
     background-color: #6BAFD2;
     position: relative;
-    background: url(/images/gradient_color_blue_155118_1280x720.jpg);
+    background: url(/images/photo-1533113354171-490d836238e3.avif);
+    object-fit: cover;
+    object-position: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 #main-content {
@@ -162,8 +167,8 @@ header h5 {
 
 .center {
     position: absolute;
-    left: 30%;
-    top: 8%;
+    left: 52%;
+    top: 35%;
 }
 
 .weth-icons {
@@ -177,139 +182,121 @@ header h5 {
 
 
 /* ------------------ */
-
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:200');
-
-:root {
-  --shadow: #fd6f21;
-  --ring: currentColor;
-  --blend1: #fc5830;
-  --blend2: #f98c24;
-  --blend-from: 0%;
-  --blend-to: 100%;
-  --blend-dir: top right;
+html,
+body {
+  /* width: 100%;
+  height: 100%; */
+  background-color: #121215;
 }
 
-[icon] {
-  flex: none;
-  display: none;
+.solar-system {
   position: relative;
-  font-size: calc(10em + 1vmin);
-  width: 3em;
-  height: 3em;
-  margin: .3em;
-  border-radius: 100%;
-  box-shadow: 0 0 0 .05em var(--ring) inset, 0 0 .3em -.03em var(--shadow);
-  background: linear-gradient( to var(--blend-dir), var(--blend1) var(--blend-from), var(--blend2) var(--blend-to));
-/*   filter: saturate(0); */
-}
-/* [icon]:hover {
-  filter: saturate(1);
-} */
-[icon]::after {
-  content: attr(data-label);
-  position: absolute;
-  top: calc(100% + 1vmin);
-  left: 50%;
-  transform: translateX(-50%);
-  font: inherit;
-  font-size: .15em;
+  width: 30rem;
+  height: 8rem;
+  margin-top: 5rem;
 }
 
-[icon='cloudy'] {
-  --shadow: yellow;
-  --blend1: #f98c24;
-  --blend2: #f98c24;
-  --shadow: #c9e8de;
-  --blend2: #e0e2e5;
-  --blend1: #f98c24;
-  --blend-to: 65%;
-  --blend-to: 90%;
+/* Some positioning rules that are common for all objects */
+.orbit {
+  border: 1px dashed #666;
+}
+
+#sun,
+.orbit,
+.orbit + div,
+.orbit + div > div {
+  position: absolute;
+}
+
+#sun,
+.orbit,
+.orbit + div {
+  /* top: 50%;
+  left: 50%; */
+}
+.orbit + div > div {
+  top: 0;
+  left: 50%;
+}
+
+.orbit,
+.orbit + div div,
+#earth {
+  border-radius: 50%;
+}
+
+/* Individual objects rules. They are pretty much the same for 
+all objects and basically only vary in orbit size 
+and planet size. And colors :) */
+
+#sun {
+  /* Positions the top-left corner of the image to be *
+	/* in the middle of the box */
+  height: 200px;
+  width: 200px;
+  background-color: #fae20a;
+  margin-top: -100px;
+  margin-left: -100px;
+  border-radius: 50%;
+  box-shadow: 0 0 84px orange;
+}
+
+#earth {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 50px;
+  width: 50px;
+  margin-left: -25px;
+  margin-top: -25px;
+  border-radius: 50%;
+  box-shadow: 0 0 34px #3a4385;
+}
+
+.earth-orbit,
+.earth-spin {
+  width: 22.5rem;
+  height: 21.5rem;
+  margin-left: -11.4rem;
+  margin-top: -10.6rem;
+}
+
+#moon {
+  margin-top: -6px;
+  margin-left: -6px;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 14px #3a4385;
+}
+.moon-orbit,
+.moon-spin {
+  height: 90px;
+  width: 90px;
+  margin-top: -45px;
+  margin-left: -45px;
+  border-color: #447;
+}
+
+
+
+
+
+/* Spinning animations */
+
+@keyframes spin-right {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.earth-spin {
+  animation: spin-right 36.5s linear infinite;
+}
+.moon-spin {
+  animation: spin-right 3s linear infinite;
 }
 
 /* CLOUDY */
 /* --------------------- */
-.cloud { 
-  position: absolute;
-  top: .1em;
-  left: 65%;
-  width: .37em;
-  height: .13em;
-  border-radius: .1em;
-  background-color:whitesmoke;
-  box-shadow: 0 0 .1em .02em var(--ring) inset, 0 0 .3em -.03em var(--shadow);
-  animation: move 3000ms infinite ease-in-out;
-}
-.cloud + .cloud {
-  top: 25%;
-  left: 40%;
-  animation: move 3000ms infinite linear;
-}
-.cloud::before,
-.cloud::after {
-  content: '';
-  position: inherit;
-  border-radius: inherit;
-  background-color: inherit;
-  box-shadow: inherit;
-  bottom: 30%;
-}
-.cloud::before {
-  left: .05em;
-  width: .2em;
-  height: .2em;
-}
-.cloud::after {
-  left: .15em;
-  width: .15em;
-  height: .15em;
-}
-
-
-body {
-  min-height: 100vh;
-  font-size: calc(.5em + 1vmin);
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-flow: row wrap;
-  font-family: 'Work Sans', sans-serif;
-  background: #212125;
-  color: #e6e8db;
-}
-
-
-
-
-[icon="cloudy"] {
-  display: block;
-}
-
-@keyframes flare {
-  to {transform: translate(-.3em, .3em); opacity: .4; font-size: .2em;}
-}
-@keyframes move {
-  50% {transform: translateX(-.05em);}
-}
-@keyframes snow {
-  50% {opacity: 1;}
-  100% {transform: translate(-.1em, 15vmin);}
-}
-@keyframes snowman {
-  50% {border-radius: 60% 60% 30% 50%;}
-}
-@keyframes flash {
-	49% {background-color: var(--shadow);}
-	51% {background-color: var(--ring);}
-	53% {background-color: var(--shadow);}
-	57% {background-color: var(--ring);}
-	85% {background-color: var(--shadow);}
-
-}
-@keyframes revolve {
-  to {transform: rotate(360deg);}
-}
-@keyframes meteor {
-  5% {opacity: 1;}
-  8% {transform: translate(-.6em, .6em) rotate(45deg); opacity: 0;}
-}
