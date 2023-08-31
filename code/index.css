@@ -208,12 +208,7 @@ body {
   position: absolute;
 }
 
-#sun,
-.orbit,
-.orbit + div {
-  /* top: 50%;
-  left: 50%; */
-}
+
 .orbit + div > div {
   top: 0;
   left: 50%;
